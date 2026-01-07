@@ -1,0 +1,15 @@
+[Unit]
+Description=Assistant Service (Nova AI)
+After=network.target
+
+[Service]
+User=ubuntu
+WorkingDirectory=/home/ubuntu/ollama-webapp
+Environment="GEMINI_API_KEY=your_actual_key_here"
+# Execute using the python interpreter inside the virtual environment
+ExecStart=/home/ubuntu/ollama-webapp/venv/bin/python3 main.py
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
