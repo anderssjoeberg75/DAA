@@ -29,7 +29,8 @@ DAA is a modular AI assistant architecture designed to bridge the gap between cl
 
 ### Step 3.1: Prepare the Environment
 ```bash
-cd /home/ubuntu/ollama-webapp
+sudo mkdir -p /opt/daa
+cd /opt/daa/
 python3 -m venv venv
 source venv/bin/activate
 ```
@@ -64,10 +65,10 @@ After=network.target
 
 [Service]
 User=ubuntu
-WorkingDirectory=/home/ubuntu/ollama-webapp
+WorkingDirectory=/opt/daa
 Environment="GEMINI_API_KEY=your_actual_key_here"
 # Using the python interpreter inside the virtual environment
-ExecStart=/home/ubuntu/ollama-webapp/venv/bin/python3 main.py
+ExecStart=/opt/daa/venv/bin/python3 main.py
 Restart=always
 RestartSec=5
 
@@ -87,6 +88,33 @@ sudo systemctl start assistant
 ---
 
 ## 💻 5. Local PC Agent Installation (Windows/Mac)
+## Installation of Python 3 on Windows 11
+
+To contribute to or run the **DAA Digital Advanced Assistant**, you need Python 3 installed on your system. Follow these steps for a correct setup:
+
+### 1. Download the Installer
+* Visit the official Python website: [python.org/downloads](https://www.python.org/downloads/windows/).
+* Download the latest stable release (e.g., Python 3.12 or 3.13).
+
+### 2. Run the Setup
+* Launch the `.exe` installer.
+* **IMPORTANT**: Check the box that says **"Add Python.exe to PATH"** at the bottom of the window. This ensures you can run Python from any terminal.
+* Click **Install Now**.
+
+### 3. Finalize Installation
+* At the end of the installation, if prompted with **"Disable path length limit"**, click it. This prevents issues with long file paths in Windows.
+
+### 4. Verify the Installation
+Open your terminal (PowerShell or CMD) and run the following commands to ensure everything is set up correctly:
+
+```bash
+# Check Python version
+python --version
+
+# Check Pip (Python Package Manager) version
+pip --version
+```
+### Install client 
 
 1. **Navigate** to the client directory on your local PC where `pc_agent.py` is located.
 2. **Install Flask:**
@@ -102,7 +130,7 @@ sudo systemctl start assistant
 ## 📂 6. Project File Map
 
 ```text
-ollama-webapp/
+daa/
 ├── main.py                # Server Entry Point (FastAPI)
 ├── persona.js             # Persona Configuration
 ├── service-account.json   # Google API Key
