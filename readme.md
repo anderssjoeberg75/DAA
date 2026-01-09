@@ -140,6 +140,6 @@ daa/
 ├── tools/
 │   └── google_calendar.py # Calendar Tool Module
 ├── public/
-│   └── index.html         # Web Interface
-└── client/
-    └── pc_agent.py        # Local PC Command Executor (The Muscle)
+    └── index.html         # Web Interface
+    └── client/
+        └── pc_agent.py        # Local PC Command Executor (The Muscle)
