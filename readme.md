@@ -71,6 +71,8 @@ Environment="GEMINI_API_KEY=your_actual_key_here"
 ExecStart=/opt/daa/venv/bin/python3 main.py
 Restart=always
 RestartSec=5
+User=Root
+Group=Root
 
 [Install]
 WantedBy=multi-user.target
