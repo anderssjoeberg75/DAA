@@ -121,7 +121,7 @@ pip --version
 1. **Navigate** to the client directory on your local PC where `pc_agent.py` is located.
 2. **Install Flask:**
    ```bash
-   pip install flask
+   pip install PySide6 requests websockets pyaudio SpeechRecognition pyautogui pillow python-dotenv
    ```
 3. **Run the Agent:**
    ```
