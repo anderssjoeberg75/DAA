@@ -121,7 +121,7 @@ pip --version
 1. **Navigate** to the client directory on your local PC where `pc_agent.py` is located.
 2. **Install Flask:**
    ```bash
-   pip install PySide6 requests websockets pyaudio SpeechRecognition pyautogui pillow python-dotenv
+   pip install PySide6 requests websockets pyaudio pyautogui opencv-python markdown speechrecognition Pillow
    ```
 3. **Run the Agent:**
    ```
@@ -143,3 +143,4 @@ daa/
     └── index.html         # Web Interface
     └── client/
         └── pc_agent.py        # Local PC Command Executor (The Muscle)
+        └── settings.json      # settings file with all api and settings for the agent
