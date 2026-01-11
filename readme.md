@@ -64,15 +64,15 @@ Description=Digital Advanced Assistant Service (DAA)
 After=network.target
 
 [Service]
-User=ubuntu
 WorkingDirectory=/opt/daa
-Environment="GEMINI_API_KEY=your_actual_key_here"
-# Using the python interpreter inside the virtual environment
-ExecStart=/opt/daa/venv/bin/python3 main.py
+Environment="GEMINI_API_KEY=AIzaSyAG_uPMTAD_rcD0XCLG5b2nDNWHJo6mu8Y"
+Environment="PORT=3000"
+ExecStart=/opt/daa/start_all.sh
+
 Restart=always
 RestartSec=5
-User=Root
-Group=Root
+User=root
+Group=root
 
 [Install]
 WantedBy=multi-user.target
