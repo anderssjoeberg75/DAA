@@ -65,7 +65,7 @@ After=network.target
 
 [Service]
 WorkingDirectory=/opt/daa
-Environment="GEMINI_API_KEY=AIzaSyAG_uPMTAD_rcD0XCLG5b2nDNWHJo6mu8Y"
+Environment="GEMINI_API_KEY= Gemini ai"
 Environment="PORT=3000"
 ExecStart=/opt/daa/start_all.sh
 
