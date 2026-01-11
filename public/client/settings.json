@@ -1,0 +1,17 @@
+{
+    "server_url": "http://192.168.107.15:3500",
+    "elevenlabs_api_key": "0dafee66df81f9516f73c27c8123bda001cb6c8d74f727bddf46043c13ac487e",
+    "elevenlabs_voice_id": "ZMs9a3j1SLzirC7aygJQ",
+    "elevenlabs_model_id": "eleven_turbo_v2_5",
+    "camera": {
+        "main_index": 0,
+        "pip_index": 1,
+        "brightness": 30,
+        "sensitivity": 5000,
+        "cooldown": 2.5
+    },
+    "turbo": {
+        "img_size": 350,
+        "quality": 35
+    }
+}
